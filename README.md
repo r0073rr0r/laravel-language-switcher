@@ -46,14 +46,21 @@ Publish the package assets (CSS and flags):
  ```bash
  php artisan vendor:publish --tag=language-switcher
  ```
-
 This will publish the flag-icons CSS file to your `public/vendor/language-switcher` directory.
 
-### Include CSS
+#### Install flag-icons package:
+```bash
+npm install flag-icons
+```
 
-Add the flag-icons CSS to your layout file (e.g., `resources/views/layouts/app.blade.php`):
-```bladehtml
-<link rel="stylesheet" href="{{ asset('vendor/language-switcher/flag-icons.min.css') }}">
+Include the CSS file in your `resources/css/app.css` file:
+```css
+@import "/node_modules/flag-icons/css/flag-icons.min.css";
+```
+
+#### Build project:
+```bash
+npm run build
 ```
 
 ## ⚙️ Configuration
@@ -96,20 +103,7 @@ Add the language switcher component to your Jetstream navigation menu in navigat
 
 ```bladehtml
 <!-- Language Switcher -->
-<div class="hidden sm:flex sm:items-center sm:ms-6">
-    @livewire('language-switcher')
-</div>
-```
-
-For responsive navigation (in the responsive menu section):
-
-```bladehtml
-<!-- Responsive Language Switcher -->
-<div class="border-t border-gray-200">
-    <div class="px-4 py-2">
-        @livewire('language-switcher')
-    </div>
-</div>
+<livewire:language-switcher/>
 ```
 
 ### Customize Available Languages
