@@ -6,13 +6,14 @@ A beautiful and easy-to-use language switcher component for Laravel applications
 [![Laravel](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com)
 [![Livewire](https://img.shields.io/badge/Livewire-3.x-pink.svg)](https://livewire.laravel.com)
 [![Laravel Jetstream](https://img.shields.io/badge/Jetstream-5.x-blue.svg)](https://jetstream.laravel.com)
-[![Packagist Version](https://img.shields.io/packagist/v/r0073rr0r/laravel-language-switcher)](https://packagist.org/packages/r0073rr0r/laravel-language-switcher)
-[![Total Downloads](https://img.shields.io/packagist/dt/r0073rr0r/laravel-language-switcher)](https://packagist.org/packages/r0073rr0r/laravel-language-switcher)
-[![Monthly Downloads](https://img.shields.io/packagist/dm/r0073rr0r/laravel-language-switcher)](https://packagist.org/packages/r0073rr0r/laravel-language-switcher)
-[![PHP Version](https://img.shields.io/packagist/php-v/r0073rr0r/laravel-language-switcher)](https://packagist.org/packages/r0073rr0r/laravel-language-switcher)
+[![Packagist Version](https://img.shields.io/packagist/v/r0073rr0r/laravel-language-switcher.svg)](https://packagist.org/packages/r0073rr0r/laravel-language-switcher)
+[![Total Downloads](https://img.shields.io/packagist/dt/r0073rr0r/laravel-language-switcher.svg)](https://packagist.org/packages/r0073rr0r/laravel-language-switcher)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/r0073rr0r/laravel-language-switcher.svg)](https://packagist.org/packages/r0073rr0r/laravel-language-switcher)
+[![PHP Version](https://img.shields.io/packagist/php-v/r0073rr0r/laravel-language-switcher.svg)](https://packagist.org/packages/r0073rr0r/laravel-language-switcher)
 [![GitHub Stars](https://img.shields.io/github/stars/r0073rr0r/laravel-language-switcher?style=social)](https://github.com/r0073rr0r/laravel-language-switcher/stargazers)
 [![GitHub Issues](https://img.shields.io/github/issues/r0073rr0r/laravel-language-switcher)](https://github.com/r0073rr0r/laravel-language-switcher/issues)
 [![GitHub Forks](https://img.shields.io/github/forks/r0073rr0r/laravel-language-switcher?style=social)](https://github.com/r0073rr0r/laravel-language-switcher/network)
+
 
 ## Features
 
