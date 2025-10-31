@@ -1,0 +1,41 @@
+{
+  "name": "r0073rr0r/laravel-language-switcher",
+  "description": "Laravel Jestream Livewire Language Switcher Component",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "r0073rr0r",
+      "email": "majstorov@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "laravel/framework": "^12.0",
+    "livewire/livewire": "^3.0",
+    "laravel/jetstream": "^5.0"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.25"
+  },
+  "autoload": {
+    "psr-4": {
+      "r0073rr0r\\LanguageSwitcher\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "r0073rr0r\\LanguageSwitcher\\LanguageSwitcherServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "@php -r \"if (file_exists('package.json')) { echo 'Running npm install...\\n'; passthru('npm install'); }\""
+    ],
+    "post-update-cmd": [
+      "@php -r \"if (file_exists('package.json')) { echo 'Running npm install...\\n'; passthru('npm install'); }\""
+    ]
+  }
+}
