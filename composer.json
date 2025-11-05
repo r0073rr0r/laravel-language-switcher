@@ -32,10 +32,10 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "@php -r \"if (file_exists('package.json')) { echo 'Running npm install...\\n'; passthru('npm install'); }\""
+      "@php -r \"chdir(__DIR__); if(file_exists('package.json')) { echo 'Running npm install...\\n'; passthru('npm install'); }\""
     ],
     "post-update-cmd": [
-      "@php -r \"if (file_exists('package.json')) { echo 'Running npm install...\\n'; passthru('npm install'); }\""
+      "@php -r \"chdir(__DIR__); if(file_exists('package.json')) { echo 'Running npm install...\\n'; passthru('npm install'); }\""
     ]
   }
 }

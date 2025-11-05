@@ -1,6 +1,6 @@
-# Laravel Language Switcher
+# Laravel Jetstream Livewire Language Switcher
 
-A beautiful and easy-to-use language switcher component for Laravel applications using Jetstream and Livewire. This package provides a dropdown menu with country flags for switching between different application languages.
+A beautiful and easy-to-use language switcher component for **Laravel** applications using **Jetstream** and **Livewire**. This package provides a dropdown menu with country flags for switching between different application languages.
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Laravel](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com)
@@ -27,9 +27,9 @@ A beautiful and easy-to-use language switcher component for Laravel applications
 ## 📋 Requirements
 
 - PHP ^8.2
-- Laravel ^12.0
-- Livewire ^3.0
-- Laravel Jetstream ^5.0
+- **Laravel ^12.0**
+- **Livewire ^3.0**
+- **Jetstream ^5.0**
 
 ## 📦 Installation
 
@@ -38,31 +38,35 @@ Install the package via Composer:
 composer require r0073rr0r/laravel-language-switcher
 ```
 
-The package will automatically install the required NPM dependencies (flag-icons).
-
-### Publish Assets
-
-Publish the package assets (CSS and flags):
- ```bash
- php artisan vendor:publish --tag=language-switcher
- ```
-This will publish the flag-icons CSS file to your `public/vendor/language-switcher` directory.
-
 #### Install flag-icons package:
 ```bash
 npm install flag-icons
 ```
+---
+### Publish Assets
+
+Publish the package assets
+ ```bash
+ php artisan vendor:publish --tag=language-switcher
+ ```
+This will publish to your `public/vendor/language-switcher` directory.
+
+<a href="https://asciinema.org/a/4yZfzItbqpigFITGlCH9mfv9c" target="_blank">
+<img src="https://asciinema.org/a/4yZfzItbqpigFITGlCH9mfv9c.svg" alt="Language Switcher Installation" />
+</a>
+
+---
 
 Include the CSS file in your `resources/css/app.css` file:
 ```css
 @import "/node_modules/flag-icons/css/flag-icons.min.css";
 ```
-
+---
 #### Build project:
 ```bash
 npm run build
 ```
-
+---
 ## ⚙️ Configuration
 
 ### 1. Register the Middleware
@@ -100,6 +104,8 @@ Create translation files for your supported languages in lang/ directory:
 ### Add to Jetstream Navigation
 
 Add the language switcher component to your Jetstream navigation menu in navigation-menu.blade.php:
+
+<img src="https://cloud.dbase.in.rs/public.php/dav/files/MfdJGCox6St4ms3/" alt="Language Switcher">
 
 ```bladehtml
 <!-- Language Switcher -->
