@@ -15,10 +15,10 @@ jobs:
         php: [8.2, 8.3]
     steps:
       - name: Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@v4.2.2
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@6d7209f44a25baf1c6d5f9d9995cd6fcd0a3d8a8 # v2
+        uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
           extensions: mbstring, intl
