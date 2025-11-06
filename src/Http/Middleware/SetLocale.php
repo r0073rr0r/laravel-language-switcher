@@ -21,10 +21,16 @@ class SetLocale
      */
     public function handle(Request $request, Closure $next)
     {
-        $locale = session('locale', config('app.locale'));
+        $supported = (array) config('language-switcher.supported_locales', []);
+        $default = (string) config('language-switcher.default_locale', (string) config('app.locale', 'en'));
 
-        if (in_array($locale, ['en', 'sr', 'ru'])) {
+        $sessionLocale = session('locale');
+        $locale = is_string($sessionLocale) ? $sessionLocale : $default;
+
+        if (in_array($locale, $supported, true)) {
             app()->setLocale($locale);
+        } else {
+            app()->setLocale($default);
         }
 
         return $next($request);

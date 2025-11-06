@@ -4,7 +4,8 @@
             <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 focus:outline-none">
                 <div class="flex items-center gap-1">
                     <span class="fi fi-{{ $flags[$locale] ?? $locale }}"></span>
-                    <span>{{ $names[$locale] ?? strtoupper($locale) }}</span>
+                    <span x-show="! open">{{ strtoupper($locale) }}</span>
+                    <span x-show="open">{{ $names[$locale] ?? strtoupper($locale) }}</span>
                 </div>
             </button>
         </x-slot>
