@@ -16,11 +16,20 @@
     "laravel/jetstream": "^5.0"
   },
   "require-dev": {
-    "laravel/pint": "^1.25"
+    "laravel/pint": "^1.25",
+    "orchestra/testbench": "^10.0",
+    "pestphp/pest": "^3.0",
+    "pestphp/pest-plugin-laravel": "^3.0",
+    "nunomaduro/collision": "^8.8"
   },
   "autoload": {
     "psr-4": {
       "r0073rr0r\\LanguageSwitcher\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "r0073rr0r\\LanguageSwitcher\\Tests\\": "tests/"
     }
   },
   "extra": {
@@ -31,11 +40,17 @@
     }
   },
   "scripts": {
+    "test": "pest",
     "post-install-cmd": [
       "@php -r \"chdir(__DIR__); if(file_exists('package.json')) { echo 'Running npm install...\\n'; passthru('npm install'); }\""
     ],
     "post-update-cmd": [
       "@php -r \"chdir(__DIR__); if(file_exists('package.json')) { echo 'Running npm install...\\n'; passthru('npm install'); }\""
     ]
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
   }
 }

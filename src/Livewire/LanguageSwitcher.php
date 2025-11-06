@@ -17,17 +17,17 @@ class LanguageSwitcher extends Component
      */
     public mixed $supportedLocales;
 
-    public function mount()
+    public function mount(): void
     {
         $this->locale = app()->getLocale();
-        $this->supportedLocales = config('language-switcher.supported_locales', ['en']);
-        $this->flags = config('language-switcher.flags', []);
-        $this->names = config('language-switcher.names', []);
+        $this->supportedLocales = (array) config('language-switcher.supported_locales', ['en']);
+        $this->flags = (array) config('language-switcher.flags', []);
+        $this->names = (array) config('language-switcher.names', []);
     }
 
     public function switchLanguage(string $locale)
     {
-        if (! in_array($locale, $this->supportedLocales)) {
+        if (! in_array($locale, $this->supportedLocales, true)) {
             return;
         }
 
@@ -37,7 +37,7 @@ class LanguageSwitcher extends Component
 
         $this->locale = $locale;
 
-        return redirect(request()->header('Referer') ?? '/');
+        return redirect()->back(fallback: '/');
     }
 
     public function render()
