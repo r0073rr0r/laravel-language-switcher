@@ -12,7 +12,8 @@ A beautiful and easy-to-use language switcher component for **Laravel** applicat
 [![GitHub Stars](https://img.shields.io/github/stars/r0073rr0r/laravel-language-switcher?style=social)](https://github.com/r0073rr0r/laravel-language-switcher/stargazers)
 [![GitHub Issues](https://img.shields.io/github/issues/r0073rr0r/laravel-language-switcher)](https://github.com/r0073rr0r/laravel-language-switcher/issues)
 [![GitHub Forks](https://img.shields.io/github/forks/r0073rr0r/laravel-language-switcher?style=social)](https://github.com/r0073rr0r/laravel-language-switcher/network)
-
+[![CodeQL](https://github.com/r0073rr0r/laravel-language-switcher/workflows/CodeQL/badge.svg)](https://github.com/r0073rr0r/laravel-language-switcher/actions/workflows/github-code-scanning/codeql)
+[![PHP Composer](https://github.com/r0073rr0r/laravel-language-switcher/workflows/PHP%20Composer/badge.svg)](https://github.com/r0073rr0r/laravel-language-switcher/actions/workflows/php.yml)
 
 ## Features
 
