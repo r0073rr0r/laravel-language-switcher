@@ -2,11 +2,11 @@
 
 A beautiful and easy-to-use language switcher component for **Laravel** applications using **Jetstream** and **Livewire**. This package provides a dropdown menu with country flags for switching between different application languages.
 
+[![Packagist Version](https://img.shields.io/packagist/v/r0073rr0r/laravel-language-switcher.svg)](https://packagist.org/packages/r0073rr0r/laravel-language-switcher)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Laravel](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com)
 [![Livewire](https://img.shields.io/badge/Livewire-3.x-pink.svg)](https://livewire.laravel.com)
 [![Laravel Jetstream](https://img.shields.io/badge/Jetstream-5.x-blue.svg)](https://jetstream.laravel.com)
-[![Packagist Version](https://img.shields.io/packagist/v/r0073rr0r/laravel-language-switcher.svg)](https://packagist.org/packages/r0073rr0r/laravel-language-switcher)
 [![Total Downloads](https://img.shields.io/packagist/dt/r0073rr0r/laravel-language-switcher.svg)](https://packagist.org/packages/r0073rr0r/laravel-language-switcher)
 [![Monthly Downloads](https://img.shields.io/packagist/dm/r0073rr0r/laravel-language-switcher.svg)](https://packagist.org/packages/r0073rr0r/laravel-language-switcher)
 [![GitHub Stars](https://img.shields.io/github/stars/r0073rr0r/laravel-language-switcher?style=social)](https://github.com/r0073rr0r/laravel-language-switcher/stargazers)
@@ -15,7 +15,23 @@ A beautiful and easy-to-use language switcher component for **Laravel** applicat
 [![CodeQL](https://github.com/r0073rr0r/laravel-language-switcher/workflows/CodeQL/badge.svg)](https://github.com/r0073rr0r/laravel-language-switcher/actions/workflows/github-code-scanning/codeql)
 [![Tests](https://github.com/r0073rr0r/laravel-language-switcher/actions/workflows/tests.yml/badge.svg)](https://github.com/r0073rr0r/laravel-language-switcher/actions/workflows/tests.yml)
 
-## Features
+## 📑 Table of Contents
+
+- [✨ Features](#-features)
+- [📋 Requirements](#-requirements)
+- [📦 Installation](#-installation)
+- [⚙️ Configuration](#️-configuration)
+- [🚀 Usage](#-usage)
+- [⚙️ How It Works](#️-how-it-works)
+- [🎨 Customization](#-customization)
+- [💻 Development](#-development)
+- [🤝 Contributing](#-contributing)
+- [🔒 Security](#-security)
+- [📝 License](#-license)
+- [🙏 Credits](#-credits)
+- [💬 Support](#-support)
+
+## ✨ Features
 
 - 🎨 Beautiful dropdown with country flags
 - ⚡ Built with Livewire 3
@@ -100,7 +116,7 @@ Create translation files for your supported languages in lang/ directory:
       sr/
       de/
 
-## Usage
+## 🚀 Usage
 
 ### Add to Jetstream Navigation
 
@@ -130,7 +146,7 @@ php artisan config:clear
 php artisan cache:clear
 ```
 
-## How It Works
+## ⚙️ How It Works
 
 1. **Middleware**: The SetLocale middleware automatically sets the application locale based on the session value
 2. **Livewire Component**: The LanguageSwitcher component provides the UI for language selection
@@ -151,7 +167,7 @@ Example flag codes:
 - es - Spain (Spanish)
 - it - Italy (Italian)
 
-## Development
+## 💻 Development
 
 The package uses Laravel Pint for code formatting:
 
@@ -174,16 +190,16 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 🔒 Security
 
-If you discover any security-related issues, please email `majstorov@gmail.com` instead of using the issue tracker.
+If you discover any security-related issues, please email `velimir@majstorov.rs` instead of using the issue tracker.
 
 ## 📝 License
 
 This package is open-sourced software licensed under the MIT license.
 
-## Credits
+## 🙏 Credits
 
 - Flag Icons for the beautiful flag icons
 
-## Support
+## 💬 Support
 
 If you find this package useful, please consider giving it a star on GitHub!
