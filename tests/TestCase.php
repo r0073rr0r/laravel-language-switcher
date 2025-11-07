@@ -2,10 +2,10 @@
 
 namespace r0073rr0r\LanguageSwitcher\Tests;
 
+use Illuminate\Support\Facades\View;
+use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use r0073rr0r\LanguageSwitcher\LanguageSwitcherServiceProvider;
-use Livewire\LivewireServiceProvider;
-use Illuminate\Support\Facades\View;
 
 abstract class TestCase extends Orchestra
 {
@@ -38,5 +38,3 @@ abstract class TestCase extends Orchestra
         View::addNamespace('language-switcher', __DIR__.'/stubs/views');
     }
 }
-
-
