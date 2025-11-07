@@ -43,7 +43,8 @@ class LanguageSwitcher extends Component
 
         $this->locale = $locale;
 
-        return redirect()->back(fallback: '/');
+        // Force page reload to apply new locale
+        $this->js('window.location.reload()');
     }
 
     public function render()
