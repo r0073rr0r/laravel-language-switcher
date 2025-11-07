@@ -31,7 +31,13 @@ class LanguageSwitcher extends Component
             return;
         }
 
-        session(['locale' => $locale]);
+        if (request()->hasSession()) {
+            request()->session()->put('locale', $locale);
+            request()->session()->save();
+        } else {
+            session()->put('locale', $locale);
+            session()->save();
+        }
 
         app()->setLocale($locale);
 
