@@ -172,24 +172,31 @@ Maps each language code to its display name that will be shown in the language s
 ],
 ```
 
-#### `force_reload` (boolean)
+#### `reload_method` (string)
 
-Controls whether the page should be automatically reloaded after switching the language.
+Defines how the application should handle the page after switching the language. This ensures that the new locale is applied correctly across the entire application.
 
-- **`true`** (default): The page will be automatically reloaded after switching the language. This ensures that the new locale is applied immediately across the entire application. Use this if your application requires a full page reload to apply locale changes.
+Available options:
 
-- **`false`**: The page will not be reloaded. Use this if your application handles locale changes without requiring a page reload (e.g., if you're using Livewire's reactive properties or if the middleware properly handles the locale change on the next request).
+- **`'js'`** (default): Uses JavaScript to reload the page (`window.location.reload()`). This is the most reliable method and ensures the locale is applied immediately. Works well in most scenarios and is recommended for most applications.
+
+- **`'redirect'`**: Uses Laravel redirect to navigate back to the previous page or home. This method uses server-side redirect which can be more SEO-friendly and provides better control over the navigation flow. Useful when you want to maintain the URL structure or need server-side processing.
+
+- **`'none'`**: Does not reload or redirect. The locale change will be applied on the next request. Use this if your application handles locale changes without requiring a page reload (e.g., if you're using Livewire's reactive properties or if the middleware properly handles the locale change on subsequent requests).
 
 **Example:**
 ```php
-// Force page reload after language switch
-'force_reload' => true,
+// Use JavaScript reload (default - most reliable)
+'reload_method' => 'js',
+
+// Use server-side redirect
+'reload_method' => 'redirect',
 
 // Don't reload - let middleware handle it on next request
-'force_reload' => false,
+'reload_method' => 'none',
 ```
 
-> **Note:** If you experience issues where the language doesn't change after switching, try setting `force_reload` to `true`. If your application already handles locale changes properly without reload, you can set it to `false` for a smoother user experience.
+> **Note:** If you experience issues where the language doesn't change after switching, try using `'js'` (default) or `'redirect'`. If your application already handles locale changes properly without reload, you can set it to `'none'` for a smoother user experience.
 
 ## 🚀 Usage
 
@@ -211,7 +218,7 @@ The default supported languages are defined in `config/language-switcher.php`:
 - `supported_locales` — list of language codes (e.g., 'en', 'sr', 'de')
 - `flags` — maps language code to flag-icons class
 - `names` — optional display names for languages
-- `force_reload` — whether to reload the page after language switch (default: `true`)
+- `reload_method` — how to handle page after language switch: `'redirect'` (default), `'js'`, or `'none'`
 
 You can add new languages by updating these arrays. See the [Configuration Options](#configuration-options) section above for detailed information about each option.
 

@@ -99,19 +99,34 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Force Page Reload After Language Switch
+    | Reload Method After Language Switch
     |--------------------------------------------------------------------------
     |
-    | When set to true, the page will be automatically reloaded after switching
-    | the language. This ensures that the new locale is applied immediately
-    | across the entire application.
+    | Defines how the application should handle the page after switching the
+    | language. This ensures that the new locale is applied correctly across
+    | the entire application.
     |
-    | Set to false if your application handles locale changes without requiring
-    | a page reload (e.g., if you're using Livewire's reactive properties or
-    | if the middleware properly handles the locale change on the next request).
+    | Available options:
     |
-    | Default: true
+    | 'js':
+    |   Uses JavaScript to reload the page (window.location.reload()).
+    |   This is the most reliable method and ensures the locale is applied
+    |   immediately. Works well in most scenarios.
+    |
+    | 'redirect' (default):
+    |   Uses Laravel redirect to navigate back to the previous page or home.
+    |   This method uses server-side redirect which can be more SEO-friendly
+    |   and provides better control over the navigation flow.
+    |
+    | 'none':
+    |   Does not reload or redirect. The locale change will be applied on the
+    |   next request. Use this if your application handles locale changes
+    |   without requiring a page reload (e.g., if you're using Livewire's
+    |   reactive properties or if the middleware properly handles the locale
+    |   change on subsequent requests).
+    |
+    | Default: 'js'
     |
     */
-    'force_reload' => true,
+    'reload_method' => 'redirect',
 ];

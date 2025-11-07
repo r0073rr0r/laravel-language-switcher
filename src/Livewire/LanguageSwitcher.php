@@ -43,10 +43,15 @@ class LanguageSwitcher extends Component
 
         $this->locale = $locale;
 
-        // Force page reload if configured
-        if (config('language-switcher.force_reload', true)) {
-            $this->js('window.location.reload()');
-        }
+        // Handle reload method based on configuration
+        $reloadMethod = config('language-switcher.reload_method', 'js');
+
+        return match ($reloadMethod) {
+            'js' => $this->js('window.location.reload()'),
+            'redirect' => $this->redirect(request()->header('Referer') ?? '/'),
+            'none' => null,
+            default => $this->redirect(request()->header('Referer') ?? '/')
+        };
     }
 
     public function render()

@@ -25,5 +25,3 @@ it('ignores unsupported locales', function () {
     expect(app()->getLocale())->toBe('en');
     expect(session('locale'))->not()->toBe('xx');
 });
-
-

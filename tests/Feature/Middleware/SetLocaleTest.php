@@ -20,5 +20,3 @@ it('falls back to default when unsupported', function () {
     $response->assertOk();
     expect($response->getContent())->toBe('en');
 });
-
-

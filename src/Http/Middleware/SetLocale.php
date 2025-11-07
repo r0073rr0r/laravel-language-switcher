@@ -24,10 +24,10 @@ class SetLocale
         $supported = (array) config('language-switcher.supported_locales', []);
         $default = (string) config('language-switcher.default_locale', (string) config('app.locale', 'en'));
 
-        $sessionLocale = $request->hasSession() 
-            ? $request->session()->get('locale') 
+        $sessionLocale = $request->hasSession()
+            ? $request->session()->get('locale')
             : session('locale');
-        
+
         $locale = is_string($sessionLocale) ? $sessionLocale : $default;
 
         if (in_array($locale, $supported, true)) {
