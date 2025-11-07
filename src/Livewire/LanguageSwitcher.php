@@ -43,8 +43,10 @@ class LanguageSwitcher extends Component
 
         $this->locale = $locale;
 
-        // Force page reload to apply new locale
-        $this->js('window.location.reload()');
+        // Force page reload if configured
+        if (config('language-switcher.force_reload', true)) {
+            $this->js('window.location.reload()');
+        }
     }
 
     public function render()

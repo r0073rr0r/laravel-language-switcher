@@ -116,6 +116,81 @@ Create translation files for your supported languages in lang/ directory:
       sr/
       de/
 
+### Configuration Options
+
+The package configuration file `config/language-switcher.php` contains the following options:
+
+#### `supported_locales` (array)
+
+List of language codes (ISO 639-1) your application supports. These codes are used to:
+- Generate the language dropdown dynamically
+- Validate language selection in the LanguageSwitcher component
+- Filter available languages in the middleware
+
+**Example:**
+```php
+'supported_locales' => ['en', 'sr', 'ru', 'de', 'fr'],
+```
+
+#### `default_locale` (string)
+
+The default language code that will be used when:
+- No language is set in the user's session
+- The session contains an unsupported locale
+- A user visits the site for the first time
+
+This should match your Laravel app's default locale in `config/app.php`.
+
+**Example:**
+```php
+'default_locale' => 'en',
+```
+
+#### `flags` (array)
+
+Maps each language code to a corresponding country flag code (ISO 3166-1 alpha-2) from the flag-icons library. This is used to display the correct flag icon next to each language option in the dropdown.
+
+**Example:**
+```php
+'flags' => [
+    'en' => 'gb',  // English → Great Britain flag
+    'sr' => 'rs',  // Serbian → Serbia flag
+    'ru' => 'ru',  // Russian → Russia flag
+],
+```
+
+#### `names` (array)
+
+Maps each language code to its display name that will be shown in the language switcher dropdown. These names are typically written in the native language. If a language code is not found in this array, the component will fall back to displaying the uppercase locale code.
+
+**Example:**
+```php
+'names' => [
+    'en' => 'English',
+    'sr' => 'Srpski',
+    'ru' => 'Русский',
+],
+```
+
+#### `force_reload` (boolean)
+
+Controls whether the page should be automatically reloaded after switching the language.
+
+- **`true`** (default): The page will be automatically reloaded after switching the language. This ensures that the new locale is applied immediately across the entire application. Use this if your application requires a full page reload to apply locale changes.
+
+- **`false`**: The page will not be reloaded. Use this if your application handles locale changes without requiring a page reload (e.g., if you're using Livewire's reactive properties or if the middleware properly handles the locale change on the next request).
+
+**Example:**
+```php
+// Force page reload after language switch
+'force_reload' => true,
+
+// Don't reload - let middleware handle it on next request
+'force_reload' => false,
+```
+
+> **Note:** If you experience issues where the language doesn't change after switching, try setting `force_reload` to `true`. If your application already handles locale changes properly without reload, you can set it to `false` for a smoother user experience.
+
 ## 🚀 Usage
 
 ### Add to Jetstream Navigation
@@ -136,8 +211,9 @@ The default supported languages are defined in `config/language-switcher.php`:
 - `supported_locales` — list of language codes (e.g., 'en', 'sr', 'de')
 - `flags` — maps language code to flag-icons class
 - `names` — optional display names for languages
+- `force_reload` — whether to reload the page after language switch (default: `true`)
 
-You can add new languages by updating these arrays.
+You can add new languages by updating these arrays. See the [Configuration Options](#configuration-options) section above for detailed information about each option.
 
 If you update supported languages, make sure to update the `supported_locales` array in `config/app.php`.
 And clear config cache:
