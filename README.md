@@ -4,8 +4,8 @@ A beautiful and easy-to-use language switcher component for **Laravel** applicat
 
 [![Packagist Version](https://img.shields.io/packagist/v/r0073rr0r/laravel-language-switcher.svg)](https://packagist.org/packages/r0073rr0r/laravel-language-switcher)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Laravel](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com)
-[![Livewire](https://img.shields.io/badge/Livewire-3.x-pink.svg)](https://livewire.laravel.com)
+[![Laravel](https://img.shields.io/badge/Laravel-12.x%20%7C%2013.x-red.svg)](https://laravel.com)
+[![Livewire](https://img.shields.io/badge/Livewire-3.x%20%7C%204.x-pink.svg)](https://livewire.laravel.com)
 [![Laravel Jetstream](https://img.shields.io/badge/Jetstream-5.x-blue.svg)](https://jetstream.laravel.com)
 [![Total Downloads](https://img.shields.io/packagist/dt/r0073rr0r/laravel-language-switcher.svg)](https://packagist.org/packages/r0073rr0r/laravel-language-switcher)
 [![Monthly Downloads](https://img.shields.io/packagist/dm/r0073rr0r/laravel-language-switcher.svg)](https://packagist.org/packages/r0073rr0r/laravel-language-switcher)
@@ -34,7 +34,7 @@ A beautiful and easy-to-use language switcher component for **Laravel** applicat
 ## ✨ Features
 
 - 🎨 Beautiful dropdown with country flags
-- ⚡ Built with Livewire 3
+- ⚡ Built with Livewire (3.x and 4.x supported)
 - 🔧 Easy integration with Laravel Jetstream
 - 🌍 Automatic locale detection and persistence
 - 🎯 Middleware for automatic locale setting
@@ -43,9 +43,9 @@ A beautiful and easy-to-use language switcher component for **Laravel** applicat
 
 ## 📋 Requirements
 
-- PHP ^8.2
-- **Laravel ^12.0**
-- **Livewire ^3.0**
+- PHP ^8.2 (PHP ^8.3 required for Laravel 13)
+- **Laravel ^12.0 || ^13.0**
+- **Livewire ^3.0 || ^4.0**
 - **Jetstream ^5.0**
 
 ## 📦 Installation

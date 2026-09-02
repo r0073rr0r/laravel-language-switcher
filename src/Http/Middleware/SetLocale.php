@@ -13,7 +13,7 @@ class SetLocale
     /**
      * Handle an incoming request.
      *
-     * @param  \Closure(Request): (Response)  $next
+     * @param  Closure(Request): (Response)  $next
      * @return Response
      *
      * @throws ContainerExceptionInterface
