@@ -2,6 +2,8 @@
 
 namespace r0073rr0r\LanguageSwitcher\Livewire;
 
+use Illuminate\Config\Repository;
+use Illuminate\Foundation\Application;
 use Livewire\Component;
 
 class LanguageSwitcher extends Component
@@ -13,7 +15,7 @@ class LanguageSwitcher extends Component
     public array $names = [];
 
     /**
-     * @var \Illuminate\Config\Repository|\Illuminate\Foundation\Application|mixed|object|null
+     * @var Repository|Application|mixed|object|null
      */
     public mixed $supportedLocales;
 

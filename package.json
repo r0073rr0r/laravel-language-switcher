@@ -2,7 +2,7 @@
   "name": "laravel-language-switcher",
   "private": true,
   "devDependencies": {
-    "vite": "^8.0.12"
+    "vite": "^8.2.2"
   },
   "dependencies": {
     "flag-icons": "^7.5.0"
